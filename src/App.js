@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ScrollView, SafeAreaView } from 'react-native';
 import getData from './components/api';
 
 export default function App() {
@@ -14,19 +14,19 @@ export default function App() {
   }, []);
 
   return (
-    <View>
+    <SafeAreaView style={{ flex: 1 }}>
       {data ? (
-        <View>
-        {data.map(item => (
-          <View key={item.id}>
-            <Text>{item.name_ja}</Text>
-            <Text>{item.address_ja}</Text>
-        </View>
-      ))}
-    </View>
+        <ScrollView style={{ flex: 1 }}>
+          {data.map(item => (
+            <View key={item.id} style={{ flex: 1 }}>
+              <Text style={{ fontSize: 20 }}>{item.name_ja}</Text>
+              <Text style={{ fontSize: 16 }}>{item.address_ja}</Text>
+            </View>
+          ))}
+        </ScrollView>
       ) : (
         <Text>Loading data...</Text>
       )}
-    </View>
+    </SafeAreaView>
   );
 };
