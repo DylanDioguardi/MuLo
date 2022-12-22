@@ -3,7 +3,7 @@
 npm install
 ```
 
-## 2. srcディレクトリにsecrets.jsを作成
+## 2. srcにsecrets.jsを作成
 ```js:secrets.js
 export const USERNAME = 'ここにユーザー名';
 export const PASSWORD = 'ここにパスワード';
