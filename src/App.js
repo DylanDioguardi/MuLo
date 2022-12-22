@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { View, Text, ScrollView, SafeAreaView } from 'react-native';
+import { StyleSheet, View, Text} from 'react-native';
 import getData from './components/api';
+import Map from './components/map';
 
 export default function App() {
   const [data, setData] = useState(null);
@@ -14,19 +15,19 @@ export default function App() {
   }, []);
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <View style={styles.container}>
       {data ? (
-        <ScrollView style={{ flex: 1 }}>
-          {data.map(item => (
-            <View key={item.id} style={{ flex: 1 }}>
-              <Text style={{ fontSize: 20 }}>{item.name_ja}</Text>
-              <Text style={{ fontSize: 16 }}>{item.address_ja}</Text>
-            </View>
-          ))}
-        </ScrollView>
-      ) : (
-        <Text>Loading data...</Text>
-      )}
-    </SafeAreaView>
+          <Map data={data} />
+        ) : (
+          <Text>Loading data...</Text>
+        )}
+    </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+  },
+});

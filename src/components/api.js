@@ -1,5 +1,5 @@
 import axios from "axios";
-import { USERNAME, PASSWORD } from '../../secrets';
+import { USERNAME, PASSWORD } from '../secrets';
 
 const getData = async () => {
     try {
