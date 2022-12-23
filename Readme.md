@@ -3,7 +3,6 @@
 npm install
 ```
 
-
 ## 2. srcにtoken.jsを作成
 ```
 const token = 'ここにトークンを入力';
