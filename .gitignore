@@ -8,9 +8,14 @@ npm-debug.*
 *.key
 *.mobileprovision
 *.orig.*
+
 web-build/
+
+Token.sh
 
 # macOS
 .DS_Store
 
-secrets.js
+
+token.js
+

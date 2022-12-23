@@ -1,24 +1,13 @@
 import axios from "axios";
-import { USERNAME, PASSWORD } from '../secrets';
+import token from '../token.js';
+
 
 const getData = async () => {
     try {
-        console.log('\x1b[33mAccessing token...\x1b[39m');
-        // First, get the access token using the `Username` and `Password` headers
-        const tokenResponse = await axios.post('https://api.kantacky.com/auth/token', {}, {
-            headers: {
-            'Username': USERNAME,
-            'Password': PASSWORD
-            }
-        });
-        const accessToken = tokenResponse.data.token;
-        console.log('\x1b[32mToken received!\x1b[39m');
-    
-        console.log('\x1b[33mAccessing Data...\x1b[39m');
-        // Then, use the `AccessToken` header to get the data from the API
+        console.log('\x1b[33mFetching data...\x1b[39m');
         const dataResponse = await axios.get('https://api.kantacky.com/bulo/tasks/personal/muji/stores', {
             headers: {
-            'AccessToken': accessToken
+            'AccessToken': token
             }
         });
         const data = dataResponse.data.data;

@@ -3,8 +3,9 @@
 npm install
 ```
 
-## 2. srcディレクトリにsecrets.jsを作成
-```js:secrets.js
-export const USERNAME = 'ここにユーザー名';
-export const PASSWORD = 'ここにパスワード';
+
+## 2. srcにtoken.jsを作成
+```
+const token = 'ここにトークンを入力';
+export default token
 ```

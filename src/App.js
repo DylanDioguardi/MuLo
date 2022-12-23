@@ -19,7 +19,9 @@ export default function App() {
       {data ? (
           <Map data={data} />
         ) : (
-          <Text>Loading data...</Text>
+          <View style={styles.textContainer}>
+            <Text style={styles.text}> Loading data...</Text>
+          </View>
         )}
     </View>
   );
@@ -30,4 +32,13 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
   },
+  textContainer: {
+    alignItems: 'center',
+    backgroundColor: '#000',
+  },
+  text: {
+    color: '#0f0',
+    backgroundColor: '#000',
+    textAlign: 'center'
+  }
 });
