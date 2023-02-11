@@ -5,7 +5,7 @@ import token from '../token.js';
 const getData = async () => {
     try {
         console.log('\x1b[33mFetching data...\x1b[39m');
-        const dataResponse = await axios.get('https://api.kantacky.com/bulo/tasks/personal/muji/stores', {
+        const dataResponse = await axios.get('https://api.kantacky.com/muji/store', {
             headers: {
             'AccessToken': token
             }

@@ -1,0 +1,2 @@
+curl -X GET https://api.kantacky.com/muji/store \
+	-H 'AccessToken:IDOgcMhcyVnCm16RwMG8hQyV0DCmaAmLIqAmdOgV5xQv6vhMMG-Il9qTf-tb51qYaw3xGklVYSHfnPArKzcwYOWjnViA48dF2gSk0inwgvVuHcnzF9wlIUpUJcTin9waXq3IWOkHN-4ic8V8RV1LxuS6zRPZCgbU7IGIWtpztGK4x02dttPuQTnQsS3fP0Q2HbH0yDTDcG7qAQFM5m00PttKue345wQmHRUMBkLskoWRxAJQRF98LM7rUwpA9hjy'

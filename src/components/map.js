@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps';
 import { StyleSheet, View, Dimensions} from 'react-native';
+import {BusStopIcon} from "./custom_svg"
 
 export default function Map({data}) {
     const [pin, setPin] = useState({
         latitude: 41.8417716,
         longitude: 140.7667037,
       })
+
+    const [busstop, setBusstop] = useState();
+
+    useEffect(() => { 
+      setBusstop(BusStopIcon);
+    }, []);
       
     return (
     <View 
@@ -37,9 +44,11 @@ export default function Map({data}) {
             latitude: item.latitude,
             longitude: item.longitude,
           }}
-          title={item.name_ja}
-          description={item.address_ja}
-        />
+          title={item.name}
+          description={item.address}
+        >
+          <BusStopIcon />
+        </Marker>
         ))}
     </MapView>
   </View>
